@@ -341,5 +341,4 @@ healthchecksdb
 
 # C++ debug files
 *.o
-*.h
 CustomSemaphore
