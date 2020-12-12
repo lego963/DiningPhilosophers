@@ -1,4 +1,4 @@
-﻿#include "CustomSemaphore.h"
+#include "CustomSemaphore.h"
 
 /*
 CustomSemaphore implementation
