@@ -49,7 +49,7 @@ private:
 	};
 #endif
 	union semun arg;				  // For semctl call
-	struct sembuf zero, lock, unlock; // hoo ha's for P,V & Z operations
+	struct sembuf zero, lock, unlock; // for P,V & Z operations
 	int semid;						  // ID of semaphore
 	pid_t my_pid;					  // PID of creator
 };

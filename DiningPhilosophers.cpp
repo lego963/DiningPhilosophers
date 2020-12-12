@@ -44,9 +44,9 @@ void Philosopher(int number)
 		right = (number + 1) % MAX;
 		do
 		{
-			cout << "A. P" << number << " is thinking\n";
+			cout << "A. P" << number << " is THINKing\n";
 			sleep(rand() % 3 + 1); // Take a while to THINK
-			cout << "B. P" << number << " ASKS to eat with forks " << left << " & " << right << endl;
+			cout << "B. P" << number << " ASKs to eat with forks " << left << " & " << right << endl;
 			Forks[left].P();  // Acquire left fork
 			Forks[right].P(); // Acquire right fork
 			Eat_It(number, left, right);
@@ -59,7 +59,7 @@ void Philosopher(int number)
 
 void Eat_It(const int number, const int left, const int right)
 {
-	cout << "C. P" << number << " is EATING   with forks " << left << " & " << right << endl;
+	cout << "C. P" << number << " is EATing with forks " << left << " & " << right << endl;
 
 	sleep(rand() % 3 + 1); // Take a while to EAT
 
