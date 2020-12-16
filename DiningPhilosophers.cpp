@@ -45,13 +45,22 @@ void Philosopher(int number)
 		do
 		{
 			cout << "A. P" << number << " is THINKing\n";
-			sleep(rand() % 3 + 1); // Take a while to THINK
+			//sleep(rand() % 3 + 1); // Take a while to THINK
 			cout << "B. P" << number << " ASKs to eat with forks " << left << " & " << right << endl;
-			Forks[left].P();  // Acquire left fork
-			Forks[right].P(); // Acquire right fork
-			Eat_It(number, left, right);
-			Forks[right].V();
-			Forks[left].V();
+			bool rightFlag = true, leftFlag = true;
+			rightFlag = Forks[left].P(); // Acquire left fork
+			leftFlag = Forks[right].P(); // Acquire right fork
+			if (rightFlag == 0 && leftFlag == 0)
+			{
+				Eat_It(number, left, right);
+				Forks[right].V();
+				Forks[left].V();
+			}
+			else
+			{
+				Forks[right].V();
+				Forks[left].V();
+			}
 
 		} while (true);
 	}
